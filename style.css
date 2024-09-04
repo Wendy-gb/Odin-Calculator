@@ -1,0 +1,80 @@
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  gap: 5px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #b82f96;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.display {
+  grid-column: 1 / -1; /* Makes the display span all 4 columns */
+  background-color: #fff;
+  padding: 10px;
+  text-align: right;
+  font-size: 24px;
+  margin-bottom: 10px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.number, .decimal {
+  background-color: #e0e0e0;
+}
+
+.number:hover, .decimal:hover {
+  background-color: #d0d0d0;
+}
+
+.operator, .equals {
+  background-color: #ff9800;
+  color: white;
+}
+
+.operator:hover, .equals:hover {
+  background-color: #f57c00;
+}
+
+.clear {
+  background-color: #f44336;
+  color: white;
+}
+
+.clear:hover {
+  background-color: #d32f2f;
+}
+
+.backspace, .percentage {
+  background-color: #4caf50;
+  color: white;
+}
+
+.backspace:hover, .percentage:hover {
+  background-color: #45a049;
+}
+
+/* Ensure the equals button spans two columns */
+.equals {
+  grid-column: 3 / 5; /* Span columns 3 to 4 */
+  background-color: #ff9800;
+  color: white;
+  width: 100%; /* Ensure it takes the full width of its grid area */
+}
